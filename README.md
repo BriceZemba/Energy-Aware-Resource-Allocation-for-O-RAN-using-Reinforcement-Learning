@@ -1,6 +1,5 @@
 # Energy-Aware Resource Allocation for O-RAN using Reinforcement Learning
 
-> **Research Mini-Project** | PhD Portfolio | Wireless Communications × AI-Driven 6G Networks
 
 ---
 
