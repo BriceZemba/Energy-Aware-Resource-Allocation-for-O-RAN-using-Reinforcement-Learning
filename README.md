@@ -1,8 +1,5 @@
 # Energy-Aware Resource Allocation for O-RAN using Reinforcement Learning
 
-
----
-
 ## Table of Contents
 
 1. [Problem Motivation](#1-problem-motivation)
