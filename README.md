@@ -32,16 +32,6 @@ Radio resource management is an inherently **sequential decision problem under u
 - Decisions at timestep *t* affect future network state (e.g., UE buffer, interference)
 - The objective is **multi-objective**: maximising Quality of Service (QoS) while minimising energy consumption — a known Pareto trade-off
 
-Classical optimisation approaches (convex relaxation, branch-and-bound, fractional programming) require explicit knowledge of the system model, scale poorly to large state-action spaces, and cannot react online to distributional shift. Deep RL offers a compelling alternative:
-
-| Property | Classical Optimisation | Deep RL (PPO) |
-|---|---|---|
-| Model-free | ✗ | ✓ |
-| Online adaptability | Limited | ✓ |
-| Scalability to high-dim. spaces | Poor | ✓ |
-| Multi-objective handling | Separate stages | Scalarised reward |
-| Real-time inference (<1 ms) | ✗ | ✓ (neural network) |
-
 ---
 
 ## 2. Mathematical Formulation
@@ -226,28 +216,6 @@ Orthogonal weight initialisation (Hu et al., 2021) is applied to stabilise early
 
 ---
 
-## 4. System Architecture
-
-```
-oran_project/
-├── environment/
-│   ├── oran_env.py          ← Custom Gym environment 
-├── agents/
-│   ├── train_ppo.py         ← PPO training loop + callbacks
-│   ├── ppo_policy_wrapper.py← Inference wrapper (evaluate_policy compatible)
-├── baselines/
-│   ├── baseline_policies.py ← Static + Greedy baselines + evaluate_policy()
-├── visualization/
-│   ├── plots.py            
-│   └── __init__.py
-├── outputs/
-├── main.py                  ← Experiment orchestrator
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## 5. Experimental Setup
 
 | Parameter | Value |
@@ -328,8 +296,7 @@ The episode time-series demonstrates adaptive resource management:
 
 ```bash
 # 1. Clone / set up
-git clone <repo>
-cd oran_project
+git clone (https://github.com/BriceZemba/Energy-Aware-Resource-Allocation-for-O-RAN-using-Reinforcement-Learning.git)
 
 # 2. Install dependencies
 pip install -r requirements.txt
