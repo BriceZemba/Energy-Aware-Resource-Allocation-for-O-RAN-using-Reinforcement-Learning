@@ -387,6 +387,3 @@ Addressing the reality gap via **domain randomisation** (varying path-loss expon
 9. ITU-R. (2023). *IMT-2030 Framework Recommendation (6G)*. ITU-R M.2160.
 10. Lotfi, H., et al. (2022). *Energy-Efficient Resource Management in Open RAN with Deep Reinforcement Learning*. IEEE GLOBECOM.
 
----
-
-*This project was developed as part of a PhD application portfolio in AI-driven 6G wireless communications. The code is designed to be extended toward real O-RAN xApp deployment.*
